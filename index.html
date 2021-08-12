@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script async="true" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=AM_CHTML"> </script>
+    <title>Physics Lab</title>
+</head>
+<body>
+    <div class="container default">
+        <div class="header">
+            <h3>Physics Lab</h3>
+            <button id="toggle-theme">Dark</button>
+        </div>
+
+        <div class="main">
+           <div class="experiment1">
+               <h2>Experiment 1</h2>
+               <p style="text-align: left;"><b>Object : </b><span>To determine the temperature coefficient of junction voltage and energy band gap.</span></p>
+               <p style="text-align: left;"><b>Apparatus Required : </b><span>p-n junction setup with displays for current voltage and temperature, oven.</span></p>
+               <p style="text-align: left;"><b>Formula Used : </b></p>
+               <div class="formula_used">
+               <h4>1.</h4>
+               <p>`I=I_o(e(qV)/(ηK_B T) - 1)`</p>
+               <p>`I ≃ A.T^m e^((q)/(η K_B T)(V-V_o)`</p>
+               <p>`I.T^-m e^((-qV)/(ηK_B T)) = A e^((-qV_o)/(ηK_B T))`</p>
+               <p>By Taking log both sides :</p>
+               <p>`lnI - mlnT - (q)/(η K_B)(V/T)= lnA - (qV_o)/(ηK_B)(1/T)`</p>
+               <p>`mlnT + (qV)/(ηK_B)(1/T) = ln(I/A) + (qV_o)/(ηK_B)(1/T)`</p>
+               <p>`q = 1.6 times 10^(-19)` Columb</p>
+               <p>V = Voltage supplied</p>
+               <p>`K_B = 1.38 times 10^(-23) m^2Kgs^-2K^-1` (Boltzmann constant)</p>
+               <p>I = current supplied = 1.0 mA</p>
+               <h4>2.</h4>
+               <p>`(dV)/(dT) = (((V-V_o))/T) - ((mηK_B)/ q)`</p>
+               <p>Where, `(dV)/(dT) =`temperature coefficient</p>
+               <p>`V_o = ` Energy Band gap</p>
+               </div>
+
+               <div class="calculation">
+                   <p><b>1. Value of 'y' by observation table : </b></p>
+                   <p>`y = mlnT + ((qv)/(ηK_B))1/T`</p>
+                   <p>`y_1 = ` <span id="y1"></span></p>
+                   <p>`y_2 = ` <span id="y2"></span></p>
+                   <p>`y_3 = ` <span id="y3"></span></p>
+                   <p>`y_4 = ` <span id="y4"></span></p>
+                   <p>`y_5 = ` <span id="y5"></span></p>
+                   <p>`y_6 = ` <span id="y6"></span></p>
+                   <p>`y_7 = ` <span id="y7"></span></p>
+                   <p>`y_8 = ` <span id="y8"></span></p>
+
+                   <p><b>2. By LSF method : </b></p>
+                   <p>Slope, `S = (overline(XY))/(bar(X^2)) = ` <span id="slope"></span></p>
+                   <p>Intercept `A' = bar(y) - delta bar(x) = `<span id="intercept"></span></p>
+                   <p>Slope, `S = (qV_o)/(ηK_B)` <br>`V_o = (SηK_B)/q` <br>`V_o = ` <span id="Vo"></span></p>
+                   <p>`A' intercept = ln(I/A)` <br> `A = Ie^(-A') = `<span id="A"></span></p>
+
+                   <p><b>3. By graph of 'y' vs 'x' : </b></p>
+                   <p>Slope, `S = (y_2 - y_1)/(x_2 - x_1) = ` <span id="slope_by_graph"></span></p>
+                   <p> `V_o = (SηK_B)/q = ` <span id="Vo_by_graph" ></span></p>
+                   <p>Intercept,  `A' = `</p>
+                   <p> `A = Ie^(-A') = ` <span id="A_by_graph"></span></p>
+                   <p>Mean `barV_o = ` <span></span></p>
+                   <p><b>4. Calculation of temperature coefficient : </b></p>
+               </div>
+           </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
